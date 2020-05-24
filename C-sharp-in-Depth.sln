@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiThread", "MultiThread"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "DesignPatterns\Singleton\Singleton.csproj", "{7FFD72AF-40BC-4192-A705-F683E4942519}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonThread", "DesignPatterns\SingletonThread\SingletonThread.csproj", "{CED83457-31AF-46D5-9B56-54A5A49C507D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{7FFD72AF-40BC-4192-A705-F683E4942519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FFD72AF-40BC-4192-A705-F683E4942519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FFD72AF-40BC-4192-A705-F683E4942519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED83457-31AF-46D5-9B56-54A5A49C507D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED83457-31AF-46D5-9B56-54A5A49C507D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED83457-31AF-46D5-9B56-54A5A49C507D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED83457-31AF-46D5-9B56-54A5A49C507D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7FFD72AF-40BC-4192-A705-F683E4942519} = {04C38DE1-80BC-4665-9716-68816D2E969C}
+		{CED83457-31AF-46D5-9B56-54A5A49C507D} = {04C38DE1-80BC-4665-9716-68816D2E969C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9E9F45D-974A-454A-B79B-B08B4C0B2DD2}
