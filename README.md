@@ -41,9 +41,18 @@ netsh http delete urlacl url=http://+:8080/
 https://learn.microsoft.com/en-us/aspnet/web-api/overview/older-versions/self-host-a-web-api
 
 ### Package
+
+#### ClientApp
+`Microsoft.AspNet.WebApi.Client` 5.2.9
+`Newtonsoft.Json` 6.0.4
+
+https://www.nuget.org/packages/Microsoft.AspNet.WebApi.Client
+
+#### SelfHost
 `Microsoft.AspNet.WebApi.Client` 5.2.9
 `Microsoft.AspNet.WebApi.Core` 5.2.9
 `Microsoft.AspNet.WebApi.SelfHost` 5.2.9
 `Newtonsoft.Json` 6.0.4
+
 This is a legacy package for hosting ASP.NET Web API within your own process (outside of IIS). Please use the Microsoft.AspNet.WebApi.OwinSelfHost package for new projects.
 https://www.nuget.org/packages/Microsoft.AspNet.WebApi.SelfHost/
