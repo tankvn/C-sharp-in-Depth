@@ -9,6 +9,34 @@ ASP.NET Web API không yêu cầu IIS. Bạn có thể tự lưu trữ API Web t
 
 Các ứng dụng mới nên sử dụng OWIN để tự lưu trữ API.
 
+Ứng dụng xác định ba hành động GET:
+| URI | Mô tả |
+| -- | -- | -- |
+| /api/products | Lấy danh sách tất cả các sản phẩm. |
+| /api/products/id | Lấy sản phẩm theo ID. |
+| /api/products/?category=category | Lấy danh sách các sản phẩm theo danh mục. |
+
+### (Optional) Add an HTTP URL Namespace Reservation
+
+Ứng dụng này lắng nghe http://localhost:8080/. Theo mặc định, việc nghe tại một địa chỉ HTTP cụ thể yêu cầu đặc quyền của quản trị viên. Do đó, khi chạy hướng dẫn, bạn có thể gặp lỗi này: "HTTP could not register URL http://+:8080/" Có hai cách để tránh lỗi này:
+
+- Chạy Visual Studio với quyền quản trị viên nâng cao, hoặc
+- Sử dụng Netsh.exe để cấp cho tài khoản của bạn quyền đặt trước URL.
+
+Để sử dụng Netsh.exe, hãy mở dấu nhắc lệnh với quyền quản trị viên và nhập lệnh sau: lệnh sau:
+
+```bat
+netsh http add urlacl url=http://+:8080/ user=machine\username
+```
+
+trong đó machine\username là tài khoản người dùng của bạn.
+
+Khi bạn hoàn tất việc tự lưu trữ, hãy nhớ xóa đặt chỗ:
+
+```bat
+netsh http delete urlacl url=http://+:8080/
+```
+
 ### Reference
 https://learn.microsoft.com/vi-vn/aspnet/web-api/overview/older-versions/self-host-a-web-api
 

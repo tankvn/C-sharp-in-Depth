@@ -9,6 +9,34 @@ This tutorial shows how to host a web API inside a console application. ASP.NET 
 
 New applications should use OWIN to self-host Web API.
 
+App defines three GET actions:
+| URI | Description |
+| -- | -- | -- |
+| /api/products | Get a list of all products. |
+| /api/products/id | Get a product by ID. |
+| /api/products/?category=category | Get a list of products by category. |
+
+### (Optional) Add an HTTP URL Namespace Reservation
+
+This application listens to http://localhost:8080/. By default, listening at a particular HTTP address requires administrator privileges. When you run the tutorial, therefore, you may get this error: "HTTP could not register URL http://+:8080/" There are two ways to avoid this error:
+
+- Run Visual Studio with elevated administrator permissions, or
+- Use Netsh.exe to give your account permissions to reserve the URL.
+
+To use Netsh.exe, open a command prompt with administrator privileges and enter the following command:following command:
+
+```bat
+netsh http add urlacl url=http://+:8080/ user=machine\username
+```
+
+where machine\username is your user account.
+
+When you are finished self-hosting, be sure to delete the reservation:
+
+```bat
+netsh http delete urlacl url=http://+:8080/
+```
+
 ### Reference
 https://learn.microsoft.com/en-us/aspnet/web-api/overview/older-versions/self-host-a-web-api
 
