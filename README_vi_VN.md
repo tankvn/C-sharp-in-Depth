@@ -52,7 +52,7 @@ netsh http delete urlacl url=http://+:44308/
 ### Reference
 https://learn.microsoft.com/vi-vn/aspnet/web-api/overview/older-versions/self-host-a-web-api
 
-### Package
+### Package & Dependencies
 
 #### ClientApp
 `Microsoft.AspNet.WebApi.Client` 5.2.9
@@ -67,3 +67,23 @@ https://www.nuget.org/packages/Microsoft.AspNet.WebApi.Client
 `Newtonsoft.Json` 6.0.4
 Đây là gói kế thừa phương pháp cũ để lưu trữ API Web ASP.NET trong quy trình process của riêng bạn (bên ngoài IIS). Vui lòng sử dụng gói Microsoft.AspNet.WebApi.OwinSelfHost cho các dự án mới.
 https://www.nuget.org/packages/Microsoft.AspNet.WebApi.SelfHost/
+
+
+# Use OWIN to Self-Host ASP.NET Web API
+
+Lưu trữ API Web ASP.NET bằng OWIN để tự lưu trữ API Web.
+
+Owin (Open Web Interface for Net) là một open-source, nó định nghĩa một chuẩn giao diện giữa webserver và web application. Mục đích của Owin là để tách biệt giữa server và ứng dụng, khuyến khích sự phát triển những modules đơn giản cho phát triển web trong .Net.
+
+### Package & Dependencies
+`Microsoft.AspNet.WebApi.Client` 5.2.9
+`Microsoft.AspNet.WebApi.Core` 5.2.9
+`Microsoft.AspNet.WebApi.Owin` 5.2.9
+`Microsoft.AspNet.WebApi.OwinSelfHost` 5.2.9
+`Microsoft.Owin` 2.0.2
+`Microsoft.Owin.Host.HttpListener` 2.0.2
+`Microsoft.Owin.Hosting` 2.0.2
+`Newtonsoft.Json` 6.0.4
+`Owin` 1.0
+
+https://www.nuget.org/packages/Microsoft.AspNet.WebApi.OwinSelfHost

@@ -42,7 +42,7 @@ netsh http delete urlacl url=http://+:8080/
 ### Reference
 https://learn.microsoft.com/en-us/aspnet/web-api/overview/older-versions/self-host-a-web-api
 
-### Package
+### Package & Dependencies
 
 #### ClientApp
 `Microsoft.AspNet.WebApi.Client` 5.2.9
@@ -58,3 +58,23 @@ https://www.nuget.org/packages/Microsoft.AspNet.WebApi.Client
 
 This is a legacy package for hosting ASP.NET Web API within your own process (outside of IIS). Please use the Microsoft.AspNet.WebApi.OwinSelfHost package for new projects.
 https://www.nuget.org/packages/Microsoft.AspNet.WebApi.SelfHost/
+
+
+# Use OWIN to Self-Host ASP.NET Web API
+
+Host ASP.NET Web API using OWIN to self-host the Web API framework.
+
+Open Web Interface for .NET (OWIN) defines an abstraction between .NET web servers and web applications. OWIN decouples the web application from the server, which makes OWIN ideal for self-hosting a web application in your own process, outside of IIS.
+
+### Package & Dependencies
+`Microsoft.AspNet.WebApi.Client` 5.2.9
+`Microsoft.AspNet.WebApi.Core` 5.2.9
+`Microsoft.AspNet.WebApi.Owin` 5.2.9
+`Microsoft.AspNet.WebApi.OwinSelfHost` 5.2.9
+`Microsoft.Owin` 2.0.2
+`Microsoft.Owin.Host.HttpListener` 2.0.2
+`Microsoft.Owin.Hosting` 2.0.2
+`Newtonsoft.Json` 6.0.4
+`Owin` 1.0
+
+https://www.nuget.org/packages/Microsoft.AspNet.WebApi.OwinSelfHost
