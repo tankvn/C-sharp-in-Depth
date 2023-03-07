@@ -13,6 +13,9 @@ Các ứng dụng mới nên sử dụng OWIN để tự lưu trữ API.
 https://learn.microsoft.com/vi-vn/aspnet/web-api/overview/older-versions/self-host-a-web-api
 
 ### Package
+`Microsoft.AspNet.WebApi.Client` 5.2.9
+`Microsoft.AspNet.WebApi.Core` 5.2.9
 `Microsoft.AspNet.WebApi.SelfHost` 5.2.9
+`Newtonsoft.Json` 6.0.4
 Đây là gói kế thừa phương pháp cũ để lưu trữ API Web ASP.NET trong quy trình process của riêng bạn (bên ngoài IIS). Vui lòng sử dụng gói Microsoft.AspNet.WebApi.OwinSelfHost cho các dự án mới.
 https://www.nuget.org/packages/Microsoft.AspNet.WebApi.SelfHost/
