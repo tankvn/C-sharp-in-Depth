@@ -9,6 +9,8 @@ ASP.NET Web API không yêu cầu IIS. Bạn có thể tự lưu trữ API Web t
 
 Các ứng dụng mới nên sử dụng OWIN để tự lưu trữ API.
 
+HTTP không chỉ để phục vụ các trang web. HTTP cũng là một nền tảng mạnh mẽ để xây dựng các API hiển thị các dịch vụ và dữ liệu. HTTP đơn giản, linh hoạt và phổ biến. Hầu hết mọi nền tảng mà bạn có thể nghĩ đến đều có thư viện HTTP, vì vậy các dịch vụ HTTP có thể tiếp cận nhiều loại khách hàng, bao gồm trình duyệt, thiết bị di động và ứng dụng máy tính để bàn truyền thống.
+
 Ứng dụng xác định ba hành động GET:
 | URI | Mô tả |
 | -- | -- | -- |
@@ -27,6 +29,15 @@ Các ứng dụng mới nên sử dụng OWIN để tự lưu trữ API.
 
 ```bat
 netsh http add urlacl url=http://+:8080/ user=machine\username
+netsh http add urlacl url=http://+:8080/ user=DOMAIN\user
+netsh http add urlacl url=http://+:8080/ user=BUILTIN\Administrators
+netsh http add urlacl url=http://+:4488/ user=BUILTIN\Users
+netsh http add urlacl url=https://+:5986/wsman/ user=NT SERVICE\WinRM
+netsh http add urlacl url=https://+:3392/rdp/ user=NT SERVICE\TermService
+netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user=\Everyone
+netsh http add urlacl url=http://+:10247/apps/ user=NT AUTHORITY\Authenticated Users
+
+netsh http show urlacl
 ```
 
 trong đó machine\username là tài khoản người dùng của bạn.
@@ -35,12 +46,21 @@ Khi bạn hoàn tất việc tự lưu trữ, hãy nhớ xóa đặt chỗ:
 
 ```bat
 netsh http delete urlacl url=http://+:8080/
+netsh http delete urlacl url=http://+:44308/
 ```
 
 ### Reference
 https://learn.microsoft.com/vi-vn/aspnet/web-api/overview/older-versions/self-host-a-web-api
 
 ### Package
+
+#### ClientApp
+`Microsoft.AspNet.WebApi.Client` 5.2.9
+`Newtonsoft.Json` 6.0.4
+
+https://www.nuget.org/packages/Microsoft.AspNet.WebApi.Client
+
+#### SelfHost
 `Microsoft.AspNet.WebApi.Client` 5.2.9
 `Microsoft.AspNet.WebApi.Core` 5.2.9
 `Microsoft.AspNet.WebApi.SelfHost` 5.2.9
