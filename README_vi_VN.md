@@ -77,14 +77,22 @@ Lưu trữ API Web ASP.NET bằng OWIN để tự lưu trữ API Web.
 Owin (Open Web Interface for Net) là một open-source, nó định nghĩa một chuẩn giao diện giữa webserver và web application. Mục đích của Owin là để tách biệt giữa server và ứng dụng, khuyến khích sự phát triển những modules đơn giản cho phát triển web trong .Net.
 
 ### Package & Dependencies
-`Microsoft.AspNet.WebApi.Client` 5.2.9  
-`Microsoft.AspNet.WebApi.Core` 5.2.9  
-`Microsoft.AspNet.WebApi.Owin` 5.2.9  
-`Microsoft.AspNet.WebApi.OwinSelfHost` 5.2.9  
-`Microsoft.Owin` 2.0.2  
-`Microsoft.Owin.Host.HttpListener` 2.0.2  
-`Microsoft.Owin.Hosting` 2.0.2  
-`Newtonsoft.Json` 6.0.4  
-`Owin` 1.0
+
+Từ package manager console:
+
+```bat
+Install-Package Microsoft.AspNet.WebApi.OwinSelfHost
+```
+
+Điều này sẽ tự động cài đặt các gói phụ thuộc sau:
+- `Microsoft.AspNet.WebApi.Client` 5.2.9
+- `Microsoft.AspNet.WebApi.Core` 5.2.9
+- `Microsoft.AspNet.WebApi.Owin` 5.2.9
+- `Microsoft.AspNet.WebApi.OwinSelfHost` 5.2.9
+- `Microsoft.Owin` 2.0.2
+- `Microsoft.Owin.Host.HttpListener` 2.0.2
+- `Microsoft.Owin.Hosting` 2.0.2
+- `Newtonsoft.Json` 6.0.4
+- `Owin` 1.0
 
 https://www.nuget.org/packages/Microsoft.AspNet.WebApi.OwinSelfHost

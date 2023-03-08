@@ -76,14 +76,22 @@ Host ASP.NET Web API using OWIN to self-host the Web API framework.
 Open Web Interface for .NET (OWIN) defines an abstraction between .NET web servers and web applications. OWIN decouples the web application from the server, which makes OWIN ideal for self-hosting a web application in your own process, outside of IIS.
 
 ### Package & Dependencies
-`Microsoft.AspNet.WebApi.Client` 5.2.9  
-`Microsoft.AspNet.WebApi.Core` 5.2.9  
-`Microsoft.AspNet.WebApi.Owin` 5.2.9  
-`Microsoft.AspNet.WebApi.OwinSelfHost` 5.2.9  
-`Microsoft.Owin` 2.0.2  
-`Microsoft.Owin.Host.HttpListener` 2.0.2  
-`Microsoft.Owin.Hosting` 2.0.2  
-`Newtonsoft.Json` 6.0.4  
-`Owin` 1.0
+
+From the package manager console:
+
+```bat
+Install-Package Microsoft.AspNet.WebApi.OwinSelfHost
+```
+
+This will install the following dependent packages automatically:
+- `Microsoft.AspNet.WebApi.Client` 5.2.9
+- `Microsoft.AspNet.WebApi.Core` 5.2.9
+- `Microsoft.AspNet.WebApi.Owin` 5.2.9
+- `Microsoft.AspNet.WebApi.OwinSelfHost` 5.2.9
+- `Microsoft.Owin` 2.0.2
+- `Microsoft.Owin.Host.HttpListener` 2.0.2
+- `Microsoft.Owin.Hosting` 2.0.2
+- `Newtonsoft.Json` 6.0.4
+- `Owin` 1.0
 
 https://www.nuget.org/packages/Microsoft.AspNet.WebApi.OwinSelfHost
