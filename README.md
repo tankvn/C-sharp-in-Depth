@@ -13,7 +13,7 @@ HTTP is not just for serving up web pages. HTTP is also a powerful platform for 
 
 App defines three GET actions:
 | URI | Description |
-| -- | -- | -- |
+| -- | -- |
 | /api/products | Get a list of all products. |
 | /api/products/id | Get a product by ID. |
 | /api/products/?category=category | Get a list of products by category. |
@@ -69,11 +69,18 @@ This is a legacy package for hosting ASP.NET Web API within your own process (ou
 https://www.nuget.org/packages/Microsoft.AspNet.WebApi.SelfHost/
 
 
+
 # Use OWIN to Self-Host ASP.NET Web API
 
 Host ASP.NET Web API using OWIN to self-host the Web API framework.
 
 Open Web Interface for .NET (OWIN) defines an abstraction between .NET web servers and web applications. OWIN decouples the web application from the server, which makes OWIN ideal for self-hosting a web application in your own process, outside of IIS.
+
+Add API controllers to the service project by creating classes inherited from `ApiController`.
+
+Note that:
+- Controllers in the service assembly will be loaded automatically.
+- If you want to load a controller in another assembly, you'll need to update your Startup.cs file (and read the note about loading controllers from other assemblies, above)
 
 ### Package & Dependencies
 

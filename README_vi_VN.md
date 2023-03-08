@@ -13,7 +13,7 @@ HTTP không chỉ để phục vụ các trang web. HTTP cũng là một nền t
 
 Ứng dụng xác định ba hành động GET:
 | URI | Mô tả |
-| -- | -- | -- |
+| -- | -- |
 | /api/products | Lấy danh sách tất cả các sản phẩm. |
 | /api/products/id | Lấy sản phẩm theo ID. |
 | /api/products/?category=category | Lấy danh sách các sản phẩm theo danh mục. |
@@ -75,6 +75,12 @@ https://www.nuget.org/packages/Microsoft.AspNet.WebApi.SelfHost/
 Lưu trữ API Web ASP.NET bằng OWIN để tự lưu trữ API Web.
 
 Owin (Open Web Interface for Net) là một open-source, nó định nghĩa một chuẩn giao diện giữa webserver và web application. Mục đích của Owin là để tách biệt giữa server và ứng dụng, khuyến khích sự phát triển những modules đơn giản cho phát triển web trong .Net.
+
+Thêm bộ điều khiển API vào dự án dịch vụ bằng cách tạo các lớp kế thừa từ `ApiController`.
+
+Lưu ý rằng:
+- Bộ điều khiển trong cụm dịch vụ sẽ được tải tự động.
+- Nếu bạn muốn tải bộ điều khiển trong một cụm khác, bạn cần cập nhật tệp Startup.cs của mình (và đọc ghi chú về việc tải bộ điều khiển từ các cụm khác, ở trên)
 
 ### Package & Dependencies
 
